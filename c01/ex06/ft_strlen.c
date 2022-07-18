@@ -1,5 +1,4 @@
 #include<unistd.h>
-#include<stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -10,9 +9,4 @@ int	ft_strlen(char *str)
 		i++;
 	}
 	return(i);
-}
-
-int main()
-{
-	printf("%d",ft_strlen("Hello"));
 }
