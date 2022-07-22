@@ -1,1 +1,5 @@
-22/7 i need to do ex08,10,11
+22/7 	i need to do ex08,10,11
+	ex10 check;
+	ex11 chexk;
+
+
