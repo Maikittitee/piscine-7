@@ -1,17 +1,24 @@
-#include<unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/24 20:49:55 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/24 20:51:16 by ktunchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int result;
-	int remainder;
+	int	result;
+	int	remainder;
 
-	*div  = a / b;
-	*mod  = a % b;
-	printf("div = %d", *div);
-	printf("mod = %d", *mod);
+	*div = a / b;
+	*mod = a % b;
 }
-/*
-int main()
+/*int main()
 {
 	int *di, *mo;
 	ft_div_mod(1,1,&di,&mo);
