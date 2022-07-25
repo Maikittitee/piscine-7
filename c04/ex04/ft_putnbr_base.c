@@ -40,8 +40,7 @@ int	ft_is_negative(int nbr)
 }
 
 void	ft_putnbr_base(int nbr, char *base)
-{
-	int		remainder;
+{	int		remainder;
 	int		result;
 	int		baselen;
 	int		i;
@@ -59,16 +58,12 @@ void	ft_putnbr_base(int nbr, char *base)
 		nbr = ft_is_negative(nbr);
 		while (nbr != 0)
 		{
-			i++;
 			remainder = nbr % baselen;
-			array[i] = base[remainder];
+			array[++i] = base[remainder];
 			nbr /= baselen;
 		}
 		while (i >= 0)
-		{
-			ft_putchar(array[i]);
-			i--;
-		}
+			ft_putchar(array[i--]);
 	}
 }	
 
@@ -77,9 +72,9 @@ int	main()
 	ft_putnbr_base(-2147483648,"0123456789");
 	ft_putchar('\n');
 	ft_putnbr_base(1,"0123456789");
-	//ft_putchar('\n');
-	//ft_putnbr_base(-2147483648,"0123456789ABCDEF");
-	//ft_putchar('\n');
-	//ft_putnbr_base(-2147483648,"poneyvif");
-	//ft_putchar('\n');
+	ft_putchar('\n');
+	ft_putnbr_base(-21478,"0123456789ABCDEF");
+	ft_putchar('\n');
+	ft_putnbr_base(3648,"poneyvif");
+	ft_putchar('\n');
 }
