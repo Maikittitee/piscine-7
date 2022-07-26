@@ -6,15 +6,12 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 20:49:55 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/24 20:51:16 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/07/26 14:54:34 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
-	int	result;
-	int	remainder;
-
 	*div = a / b;
 	*mod = a % b;
 }
