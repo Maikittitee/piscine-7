@@ -1,45 +1,38 @@
-#include<stdio.h>
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	while (str[i] != '\0')
-		i++;
-	return(i);
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/26 15:29:13 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/26 15:31:40 by ktunchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int		find_len;
-	int		str_len;
 	int		i;
 	int		j;
 
-	find_len = ft_strlen(to_find); //2
-	str_len = ft_strlen(str); //12
 	i = 0;
 	j = 0;
-	while (i < find_len+1) // i < 2 (i = 0 1 2)
+	if (to_find[j] == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
-		if (to_find[i] == str[j] || to_find[i] == '\0') //"\0" == "l"
-		{
-			if (to_find[i] == '\0')
-				return ("Ger");
-			i++;
+		while (str[i + j] == to_find[j] && str[i + j] != '\0')
 			j++;
-		}
-		else
-		{
-			if (str[j] == '\0')
-				return ("Mai Ger");
-			j++;
-		}
+		if (to_find[j] == '\0')
+			return (str + i);
+		i++;
+		j = 0;
 	}
 }
-
+/*
 int	main()
 {
-	printf("%s",ft_strstr("Hello, World","le"));
-}
 
+	printf("%s",ft_strstr("Hello, World","111"));
+}
+*/
