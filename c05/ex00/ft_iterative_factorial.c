@@ -1,41 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 11:21:31 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/25 14:35:59 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/07/27 21:42:23 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/27 21:53:02 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_lowercase(char *str)
+int	ft_iterative_factorial(int nb)
 {
-	int	i;
-	int	j;
+	int	result;
+	int	count;
 
-	i = 0;
-	j = 0;
-	while (str[i] != '\0')
+	count = nb;
+	result = 1;
+	while (count >= 1)
 	{
-		if ((str[i] >= 97 && str[i] <= 122))
-			j++;
-		i++;
+		result *= count;
+		count--;
 	}
-	if (i == j)
-		return (1);
-	else
-		return (0);
+	return (result);
 }
-
-/*int	main(void)
+/*
+int	main()
 {
-	char	*str;
-	char	*str2;
-
-	str = "hello";
-	str2 = "Hello";
-	printf("%d\n", ft_str_is_lowercase(str));
-	printf("%d\n", ft_str_is_lowercase(str2));
+	printf("%d\n", ft_iterative_factorial(0));
+	printf("%d\n", ft_iterative_factorial(-1));
+	printf("%d\n", ft_iterative_factorial(3));
+	printf("%d\n", ft_iterative_factorial(4));
+	printf("%d\n", ft_iterative_factorial(5));
 }*/
