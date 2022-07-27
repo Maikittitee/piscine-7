@@ -6,7 +6,7 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 20:44:09 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/25 14:40:18 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/07/27 21:07:07 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-
+/*
 int main()
 {
 	char str[100] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
 	printf("%s \n",ft_strcapitalize(str));
-}
+}*/

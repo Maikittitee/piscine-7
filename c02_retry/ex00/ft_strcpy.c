@@ -6,11 +6,9 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 13:25:54 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/25 14:34:50 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/07/27 21:09:06 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include<stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
 {
@@ -26,7 +24,7 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = '\0';
 	return (dest);
 }
-
+/*
 int	main()
 {
 	char src[20] = "Hello, World";
@@ -34,4 +32,4 @@ int	main()
 	ft_strcpy(dest, src);
 	printf("dest = %s\n", dest);
 }
-
+*/
