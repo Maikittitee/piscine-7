@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<stdio.h>
+
 char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -20,11 +22,11 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	if (dest[i] != '\n')
+	if (dest[i] != '\0')
 		dest[i] = '\0';
 	return (dest);
 }
-/*
+
 int	main()
 {
 	char src[20] = "Hello, World";
@@ -32,4 +34,4 @@ int	main()
 	ft_strcpy(dest, src);
 	printf("dest = %s\n", dest);
 }
-*/
+

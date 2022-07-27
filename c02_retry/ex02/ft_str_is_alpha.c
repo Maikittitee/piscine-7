@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include<stdio.h>
+
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
@@ -28,8 +30,8 @@ int	ft_str_is_alpha(char *str)
 	else
 		return (0);
 }
-/*
-int	main(void)
+
+int	main()
 {
 	char	*str;
 	char	*str2;
@@ -38,4 +40,4 @@ int	main(void)
 	str2 = "Hello";
 	printf("%d\n", ft_str_is_alpha(str));
 	printf("%d\n", ft_str_is_alpha(str2));
-}*/
+}

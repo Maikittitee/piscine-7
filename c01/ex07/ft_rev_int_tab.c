@@ -16,19 +16,20 @@ void	ft_rev_int_tab(int *tab, int size)
 	int	i;
 
 	i = 0;
+	temp = 0;
 	while (i <= size / 2)
 	{
 		temp = tab[i];
 		tab[i] = tab[size - i - 1];
 		tab[size - i - 1] = temp;
-		i += 1;
+		i ++;
 	}
 }
 /*
 int	main()
 {
-	int ip[10]= {1,2,3};
+	int ip[4]= {1,2,3,4};
 	
-	ft_rev_int_tab(ip,3);
-	printf("%d %d %d",ip[0],ip[1],ip[2]);
+	ft_rev_int_tab(ip,4);
+	printf("%d %d %d %d",ip[0],ip[1],ip[2],ip[3]);
 }*/
