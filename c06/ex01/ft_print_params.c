@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/26 15:29:13 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/28 19:51:53 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/07/28 16:11:31 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/28 16:12:25 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+#include<unistd.h>
+
+void	ft_putchar(char c)
 {
-	int		i;
-	int		j;
+	write(1, &c, 1);
+}
+
+void	ft_printstr(char *str)
+{
+	int	i;
 
 	i = 0;
-	j = 0;
-	if (to_find[j] == '\0')
-		return (str);
 	while (str[i] != '\0')
 	{
-		while (str[i + j] == to_find[j] && str[i + j] != '\0')
-			j++;
-		if (to_find[j] == '\0')
-			return (str + i);
-		i++;
-		j = 0;
+		ft_putchar(str[i++]);
 	}
-	return ("\0");
 }
-/*
-int	main()
-{
 
-	printf("%s",ft_strstr("Hello, World","ell"));
+int	main(int argc, char **argv)
+{
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		ft_printstr(argv[i++]);
+		ft_putchar('\n');
+	}
+	return (0);
 }
-*/
