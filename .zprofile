@@ -9,5 +9,5 @@ alias rma='(){
 
 #git add && git commit -m "S1" && git push
 alias gitup='(){
-	(echo "\n++++++++++++++++++++++++++++++++++++++\n git add . && git commit -m "$1 auto by alias" && git push \n--------------------------------------"; git add . && git commit -m "$1 auto by alias" && git push);}'
+	(echo "\n++++++++++++++++++++++++++++++++++++++\n git add $1 && git commit -m "$2 auto by alias" && git push \n--------------------------------------"; git add $1 && git commit -m "$2 auto by alias" && git push);}'
 

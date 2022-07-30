@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdio.h>
+#include<stdio.h>
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
@@ -34,9 +34,41 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	return (dest);
 }
 /*
-int	main()
+#include <string.h>
+
+int     main(void)
 {
-	char	dest[6] = "Hel";
-	char	src[20] = "lo World";
-	printf("%s",ft_strncat(dest,src,2));
+	char str[300];
+
+	strcpy(str,"1234");
+    	printf("Real   result : %s\n",strncat(str,"ABCdef",0));
+	strcpy(str,"1234");
+    	printf("User   result : %s\n",ft_strncat(str,"ABCdef",0));
+
+	strcpy(str,"Best Test ");
+    	printf("Real   result : %s\n",strncat(str,"ABCdef",6));
+	strcpy(str,"Best Test ");
+    	printf("User   result : %s\n",ft_strncat(str,"ABCdef",6));
+
+	strcpy(str,"Best Test ");
+    	printf("Real   result : %s\n",strncat(str,"ABC",6));
+	strcpy(str,"Best Test ");
+    	printf("User   result : %s\n",ft_strncat(str,"ABC",6));
+
+	strcpy(str,"Best Test ");
+    	printf("Real   result : %s\n",strncat(str,"ABCdef",3));
+	strcpy(str,"Best Test ");
+    	printf("User   result : %s\n",ft_strncat(str,"ABCdef",3));
+
+	strcpy(str,"Add empty.");
+    	printf("Real   result : %s\n",strncat(str,"",3));
+	strcpy(str,"Add empty.");
+    	printf("User   result : %s\n",ft_strncat(str,"",3));
+
+	strcpy(str,"");
+    	printf("Real   result : %s\n",strncat(str,"",3));
+	strcpy(str,"");
+    	printf("User   result : %s\n",ft_strncat(str,"",3));
+
+    	return (0);
 }*/
