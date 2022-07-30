@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 22:05:31 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/30 22:06:42 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/07/25 20:18:20 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/25 21:31:02 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i;
+	int	j;
+	int	count;
 
 	i = 0;
-	while (s1[i] == s2[i])
-	{
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (0);
+	j = 0;
+	count = 0;
+	while (src[j] != '\0')
+		j++;
+	while (dest[i] != '\0')
 		i++;
+	while (count <= j)
+	{
+		dest[i] = src[count];
+		i++;
+		count++;
 	}
-	return (s1[i] - s2[i]);
+	return (dest);
 }
+/*
+int	main()
+{	
+	char	dest[20] = "Hello ";
+	char	src[20] = "World";
+	
+	printf("%s",ft_strcat(dest, src));
+}*/

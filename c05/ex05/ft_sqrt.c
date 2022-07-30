@@ -1,27 +1,27 @@
-#include<stdio.h>
+//#include<stdio.h>
 
-int	power2(int nb)
+long long	power2(long nb)
 {
 	return (nb * nb);
 }
 
-int	ft_sqrt(int nb)//9
+int	ft_sqrt(int nb)
 {
-	int	mid;
-	int	temp;
+	long long	i;
 
-	mid = nb / 2;
-	if (nb <= 0)
-		return (0);
-	if (nb == 1)
-		return (1);
-	if (nb > 2)
+	i = 0;
+	
+	while (power2(i) <= nb)
 	{
-		while (power2(mid) >= )
+		if (power2(i) == nb)
+		{
+			return (i);
+		}
+		i++;
 	}
-	return (0);
+	return(0);
 }
-
+/*
 int	main(void)
 {
 	printf("Expect: sqrt(0) = 0\n");
@@ -41,3 +41,4 @@ int	main(void)
 	printf("Expect: sqrt(934247393) = 0 [expect not found]\n");
 	printf("Result: sqrt(934247393) = %d\n", ft_sqrt(934247393));
 }
+*/

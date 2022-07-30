@@ -1,25 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 22:05:31 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/30 22:06:42 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/07/13 19:48:56 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/14 18:21:35 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include<unistd.h>
 
-int	ft_strcmp(char *s1, char *s2)
+void	putchar(char a, char b, char c)
 {
-	int	i;
+	write(1, &a, 1);
+	write(1, &b, 1);
+	write(1, &c, 1);
+}
 
-	i = 0;
-	while (s1[i] == s2[i])
+void	ft_print_comb(void)
+{
+	char	a;
+	char	b;
+	char	c;
+
+	a = '0';
+	while (a <= '9')
 	{
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (0);
-		i++;
+	b = a + 1;
+		while (b <= '8')
+		{
+			c = b + 1;
+			while (c <= '9')
+			{
+				putchar(a, b, c);
+				if (!(a == '7' && b == '8' && c == '9'))
+					write(1, ", ", 2);
+				c += 1;
+			}
+			b += 1;
+		}
+		a += 1;
 	}
-	return (s1[i] - s2[i]);
 }

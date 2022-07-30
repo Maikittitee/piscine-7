@@ -1,25 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 22:05:31 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/30 22:06:42 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/07/25 21:38:15 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/30 23:29:00 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+//#include<stdio.h>
 
-	i = 0;
-	while (s1[i] == s2[i])
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
+{
+	int				s1;
+	int				s2;
+	unsigned int	count;
+
+	s1 = 0;
+	s2 = 0;
+	count = 0;
+	while (src[s2] != '\0')
+		s2++;
+	while (dest[s1] != '\0')
+		s1++;
+	while (count < nb)
 	{
-		if (s1[i] == '\0' && s2[i] == '\0')
-			return (0);
-		i++;
+		dest[s1] = src[count];
+		count++;
+		s1++;
 	}
-	return (s1[i] - s2[i]);
+	return (dest);
 }
+/*
+int	main()
+{
+	char	dest[6] = "Hel";
+	char	src[20] = "lo World";
+	printf("%s",ft_strncat(dest,src,2));
+}*/
