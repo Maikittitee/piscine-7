@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 01:07:09 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/08/01 01:07:11 by ktunchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 //#include<stdio.h>
 
 long long	power2(long nb)
@@ -10,16 +22,13 @@ int	ft_sqrt(int nb)
 	long long	i;
 
 	i = 0;
-	
 	while (power2(i) <= nb)
 	{
 		if (power2(i) == nb)
-		{
 			return (i);
-		}
 		i++;
 	}
-	return(0);
+	return (0);
 }
 /*
 int	main(void)

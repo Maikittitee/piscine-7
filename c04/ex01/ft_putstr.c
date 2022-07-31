@@ -1,26 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_power.c                               :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/01 01:05:01 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/08/01 01:05:04 by ktunchar         ###   ########.fr       */
+/*   Created: 2022/07/24 20:53:03 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/07/31 16:51:15 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_recursive_power(int nb, int power)
+#include<unistd.h>
+
+void	ft_putchar(char c)
 {
-	if (power == 0)
-		return (1);
-	else
-		return (nb * ft_recursive_power(nb, power - 1));
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i += 1;
+	}
 }
 /*
-#include<stdio.h>
-int	main()
+#include <stdio.h>
+
+int     main(void)
 {
-	printf("%d", ft_recursive_power(2,2));
+    	printf("Expect result : abcdef\n");
+    	printf("User   result : ");
+	fflush(stdout);
+	ft_putstr("abcdef");
+	
+	printf("\n");
+    	return (0);
 }
 */
