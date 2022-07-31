@@ -6,7 +6,7 @@
 /*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 21:38:15 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/31 12:55:47 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/07/31 13:01:05 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[s1] = '\0';
 	return (dest);
 }
-
+/*
 #include <string.h>
 
 int     main(void)
@@ -68,4 +68,4 @@ int     main(void)
     	printf("User   result : %s\n",ft_strncat(str,"",3));
 
     	return (0);
-}
+}*/
