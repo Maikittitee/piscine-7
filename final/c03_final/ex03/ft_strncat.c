@@ -31,9 +31,10 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 		count++;
 		s1++;
 	}
+	dest[s1] = '\0';
 	return (dest);
 }
-/*
+
 #include <string.h>
 
 int     main(void)
@@ -71,4 +72,4 @@ int     main(void)
     	printf("User   result : %s\n",ft_strncat(str,"",3));
 
     	return (0);
-}*/
+}
