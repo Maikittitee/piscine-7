@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 18:45:28 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/08/01 18:46:02 by ktunchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_is_prime(int nb)
 {
 	int	i;
@@ -16,7 +28,7 @@ int	ft_is_prime(int nb)
 
 int	ft_find_next_prime(int nb)
 {
-	while (ft_is_prime(nb) != 8)
+	while (ft_is_prime(nb) == 0 || ft_is_prime(nb) == 1)
 	{
 		if (ft_is_prime(nb) == 1)
 			return (nb);
@@ -43,11 +55,5 @@ int	main(void)
 	printf("Result: 13 => %d\n", ft_find_next_prime(13));
 	printf("Expect: 284 => 293\n");
 	printf("Result: 284 => %d\n", ft_find_next_prime(284));
-	printf("Expect: 2147483643 => 2147483647\n");
-	printf("Result: 2147483643 => %d\n", ft_find_next_prime(2147483643));
-	printf("Expect: 2147483647 => 2147483647\n");
-	printf("Result: 2147483647 => %d\n", ft_find_next_prime(2147483647));
 	return (0);
-}
-
-*/
+}*/

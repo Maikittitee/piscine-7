@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonaci.c                                      :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktunchar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 00:16:28 by ktunchar          #+#    #+#             */
-/*   Updated: 2022/07/30 00:21:38 by ktunchar         ###   ########.fr       */
+/*   Updated: 2022/08/01 18:37:42 by ktunchar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ int	ft_fibonacci(int index)
 	}
 	return (-1);
 }
-
-#include<stdio.h>
 /*
+#include<stdio.h>
+
 int	main(void)
 {
 	printf("Expect: fibo(0) = 0\n");
