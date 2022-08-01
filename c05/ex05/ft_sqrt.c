@@ -30,7 +30,7 @@ int	ft_sqrt(int nb)
 	}
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	printf("Expect: sqrt(0) = 0\n");
@@ -50,3 +50,4 @@ int	main(void)
 	printf("Expect: sqrt(934247393) = 0 [expect not found]\n");
 	printf("Result: sqrt(934247393) = %d\n", ft_sqrt(934247393));
 }
+*/
