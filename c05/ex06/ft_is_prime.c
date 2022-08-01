@@ -49,4 +49,5 @@ int	main(void)
 	printf("Expect: -1 => 0\n");
 	printf("Result: -1 => %d\n", ft_is_prime(-1));
 	return (0);
-}*/
+}
+*/
