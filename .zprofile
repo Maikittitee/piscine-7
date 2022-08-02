@@ -1,5 +1,5 @@
 #programing C
-alias gc='(){
+alias gwa='(){
 	(echo "\n+++++++++++++++++++++++++++++++++++++\nCompiling $1\n--------------------------------------"; gcc -Wall -Werror -Wextra $1) && \
 	(echo "\n+++++++++++++++++++++++++++++++++++++\nRunning a.out\n--------------------------------------"; ./a.out); }'
 
@@ -9,5 +9,9 @@ alias rma='(){
 
 #git add && git commit -m "S1" && git push
 alias gitup='(){
-	(echo "\n++++++++++++++++++++++++++++++++++++++\n git add $1 && git commit -m "$2 auto by alias" && git push \n--------------------------------------"; git add $1 && git commit -m "$2 auto by alias" && git push);}'
+	(echo "\n++++++++++++++++++++++++++++++++++++++\ngit add $1\n--------------------------------------"; git add $1) && \
+	(echo "\n++++++++++++++++++++++++++++++++++++++\ngit commit -m "$2 by alias"\n--------------------------------------"; git commit -m "$2 by alias") && \
+	(echo "\n++++++++++++++++++++++++++++++++++++++\ngit push\n--------------------------------------"; git push);}'
+
+
 
