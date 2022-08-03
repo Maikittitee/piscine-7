@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktunchar <ktunchar@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/03 16:14:05 by ktunchar          #+#    #+#             */
+/*   Updated: 2022/08/03 16:55:32 by ktunchar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,24 +22,22 @@ int	ft_ultimate_range(int **range, int min, int max)
 
 	if (min >= max)
 	{
-		*range = 0;
+		*range = NULL;
 		return (0);
 	}
 	diff = max - min;
-	d = (buffer = malloc((diff * sizeof(int))));
-	printf("d = %d\n", *d);
-	if (!d)
-	{
-		*range = 0;
+	buffer = (int *) malloc((diff * sizeof(int)));
+	
+	if (buffer == NULL)
 		return(-1);
-	}
-	*range = buffer;
+	
 	index = 0;
 	while (index < diff)
 	{
 		buffer[index] = index + min;
 		index++;
 	}
+	*range =  buffer;
 	return (diff);
 }
 
