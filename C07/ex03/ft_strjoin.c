@@ -70,7 +70,7 @@ char *ft_strjoin(int size, char **strs, char *sep)
 		i++;
 	}
 	return (newstr);
-}/
+}
 /*
 int	main(void)
 {
