@@ -9,7 +9,10 @@ int	ft_ultimate_range(int **range, int min, int max)
 	int	diff;
 
 	if (min >= max)
+	{
+		*range = 0;
 		return (0);
+	}
 	diff = max - min;
 	d = (buffer = malloc((diff * sizeof(int))));
 	printf("d = %d\n", *d);
